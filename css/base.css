@@ -1,0 +1,119 @@
+/*переменные*/
+:root {
+  --green: #1bbc9b;
+  --green-dark: #16a085;
+  --dark: #1d1d1d;
+  --text: #444;
+  --gray: #999;
+  --light: #f3f3f3;
+  --white: #fff;
+
+  --font: "Open Sans";
+  --container: 1200px;
+  --time: 0.3s;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--green) var(--light);
+}
+
+body {
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+  cursor: url("../img/icons/cursor.svg"), auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: url("../img/icons/cursor-pointer.svg"), pointer;
+}
+
+img {
+  width: 100%;
+}
+
+::-moz-selection {
+  background: var(--green);
+  color: var(--white);
+}
+
+::selection {
+  background: var(--green);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green);
+  border-radius: 10px;
+}
+
+.container {
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.title {
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitle {
+  max-width: 470px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 12px;
+  color: var(--gray);
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 12px;
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 50px;
+  transition: var(--time);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.btn:hover {
+  background: var(--white);
+  color: var(--green);
+}
